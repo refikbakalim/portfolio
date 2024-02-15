@@ -1,4 +1,10 @@
+import Layout from "@/components/Layout";
 import Head from "next/head";
+import Image from "next/image";
+import homeImage from "../../public/images/developer-pic.png"
+import AnimatedText from "@/components/AnimatedText";
+import Link from "next/link";
+import { LinkArrow } from "@/components/Icons";
 
 export default function Home() {
 	return (
@@ -15,7 +21,25 @@ export default function Home() {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main></main>
+			<main className="flex items-center text-dark w-full min-h-screen">
+				<Layout className="pt-0">
+					<div className="flex items-center justify-between w-full">
+						<div className="w-1/2">
+							<Image src={homeImage} alt="Image of a developer" className="w-full h-auto"></Image>
+						</div>
+						<div className="w-1/2 flex flex-col items-center self-center">
+							<AnimatedText text="Ahmet Refik Bakalım" className="!text-6xl !text-left" />
+							<p className="my-4 text-base font-medium">
+								As a dedicated software engineer, I am committed to translating innovative ideas into robust software solutions that elevate user experiences and drive technological advancement. With a meticulous approach and a deep understanding of software architecture, I strive to deliver solutions that not only meet but exceed expectations. Explore my portfolio to delve into my latest projects, where my expertise in software engineering principles shines through in every line of code.
+							</p>
+							<div className="flex items-center self-start mt-2">
+								<Link href="/dummy_CV.pdf" target={"_blak"} className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark">Resume <LinkArrow className="w-6 ml-1" /></Link>
+								<Link href="mailto:refikbakalim@gmail.com" target={"_blank"} className="ml-4 text-lg font-medium capitalize text-dark underline">Contact</Link>
+							</div>
+						</div>
+					</div>
+				</Layout>
+			</main>
 		</>
 	);
 }
