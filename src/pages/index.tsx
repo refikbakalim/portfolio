@@ -5,6 +5,7 @@ import homeImage from "../../public/images/developer-pic.png"
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
+import lightBulb from "../../public/svgs/lightbulb.svg"
 
 export default function Home() {
 	return (
@@ -25,7 +26,7 @@ export default function Home() {
 				<Layout className="pt-0">
 					<div className="flex items-center justify-between w-full">
 						<div className="w-1/2">
-							<Image src={homeImage} alt="Image of a developer" className="w-full h-auto"></Image>
+							<Image src={homeImage} alt="" className="w-full h-auto"></Image>
 						</div>
 						<div className="w-1/2 flex flex-col items-center self-center">
 							<AnimatedText text="Ahmet Refik Bakalım" className="!text-6xl !text-left" />
@@ -39,6 +40,9 @@ export default function Home() {
 						</div>
 					</div>
 				</Layout>
+				<div className="absolute right-8 bottom-8 inline-block w-24">
+					<Image src={lightBulb} alt="" className="w-full h-auto" />
+				</div>
 			</main>
 		</>
 	);
