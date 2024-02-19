@@ -6,6 +6,7 @@ const config: Config = {
 		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
+	darkMode: "class",
 	theme: {
 		extend: {
 			backgroundImage: {
@@ -14,6 +15,8 @@ const config: Config = {
 					"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 				circularLight:
 					"repeating-radial-gradient(rgba(0,0,0,0.4) 2px, #f5f5f5 5px, #f6f6f6 100px);",
+				circularDark:
+					"repeating-radial-gradient(rgba(255,255,255,0.5) 2px, #1b1b1b 8px, #1b1b1b 100px);",
 			},
 			fontFamily: {
 				mont: ["var(--font-mont)"],
@@ -24,7 +27,7 @@ const config: Config = {
 				primary: "#B63E96",
 				primaryDark: "#58E6D9",
 			},
-					},
+		},
 	},
 	plugins: [],
 };

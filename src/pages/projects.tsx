@@ -13,25 +13,27 @@ import rowmatchImage from "../../public/project-images/row-match.png"
 import requestTrackerImage from "../../public/project-images/request-tracker.png"
 import echoImage from "../../public/project-images/echo.png"
 import apiMonitorImage from "../../public/project-images/api-monitor.jpg"
+import { motion } from 'framer-motion'
 
+const FramerImage = motion(Image);
 
-const LongProject = ({ type, title, summary, img, link, githubLink }: { type: string, title: string, summary: string, img: StaticImageData, link?: string, githubLink: string }) => {
+const LongProject = ({ type, title, summary, img, link, githubLink, priority = false }: { type: string, title: string, summary: string, img: StaticImageData, link?: string, githubLink: string, priority?: boolean }) => {
 	return (
-		<article className='w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 relative rounded-br-2xl'>
-			<div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl' />
+		<article className='w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 relative rounded-br-2xl dark:bg-dark dark:border-light'>
+			<div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light' />
 			<Link href={link || githubLink} target="_blank" className='w-1/2 cursor-pointer overflow-hidden rounded-lg border border-dark shadow-lg'>
-				<Image src={img} alt={title} className="w-full h-auto" />
+				<FramerImage src={img} alt={title} className="w-full h-auto" whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }} priority={priority} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw" />
 			</Link>
 			<div className='w-1/2 flex flex-col items-start justify-between pl-6'>
-				<span className='text-primary font-medium text-xl'>{type}</span>
+				<span className='text-primary font-medium text-xl dark:text-primaryDark'>{type}</span>
 				<Link href={link || githubLink} target="_blank" className='hover:underline underline-offset-2'>
-					<h2 className='my-2 w-full text-left text-4xl font-bold '>{title}</h2>
+					<h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light'>{title}</h2>
 				</Link>
-				<p className='my-2 font-medium text-dark'>{summary}</p>
+				<p className='my-2 font-medium text-dark dark:text-light'>{summary}</p>
 				<div className='mt-2 flex items-center'>
 					<Link href={githubLink} target="_blank" className='w-10'><GitHubIcon /></Link>
 					{link &&
-						<Link href={link} target="_blank" className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold'>Visit Project</Link>
+						<Link href={link} target="_blank" className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark'>Visit Project</Link>
 					}
 				</div>
 			</div>
@@ -41,17 +43,17 @@ const LongProject = ({ type, title, summary, img, link, githubLink }: { type: st
 
 const Project = ({ type, title, img, summary, githubLink }: { type: string, title: string, img: StaticImageData, summary: string, githubLink: string }) => {
 	return (
-		<article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative'>
-			<div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl' />
+		<article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light'>
+			<div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light' />
 			<Link href={githubLink} target="_blank" className='w-full cursor-pointer overflow-hidden rounded-lg'>
-				<Image src={img} alt={title} className="w-full h-auto" />
+				<FramerImage src={img} alt={title} className="w-full h-auto" whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }} />
 			</Link>
 			<div className='w-full flex flex-col items-start justify-between mt-4'>
-				<span className='text-primary font-medium text-xl'>{type}</span>
+				<span className='text-primary font-medium text-xl dark:text-primaryDark'>{type}</span>
 				<Link href={githubLink} target="_blank" className='hover:underline underline-offset-2'>
-					<h2 className='my-2 w-full text-left text-3xl font-bold'>{title}</h2>
+					<h2 className='my-2 w-full text-left text-3xl font-bold dark:text-light'>{title}</h2>
 				</Link>
-				<p className='my-2 font-medium text-dark'>{summary}</p>
+				<p className='my-2 font-medium text-dark dark:text-light'>{summary}</p>
 				<div className='w-full mt-2 flex items-center justify-between'>
 					<Link href={githubLink} target="_blank" className='w-8'><GitHubIcon /></Link>
 				</div>
@@ -71,21 +73,21 @@ const projects = () => {
 					content="Projects of Refik Bakalim"
 				/>
 			</Head>
-			<main className='w-full mb-16 flex flex-col items-center justify-center'>
+			<main className='w-full mb-16 flex flex-col items-center justify-center dark:text-light'>
 				<Layout className='pt-16'>
 					<AnimatedText text="Exploring My Coding Journey" className='mb-16' />
 					<div className='grid grid-cols-12 gap-24 gap-y-32'>
 						<div className='col-span-12'>
 							<LongProject type="Website" title="Portfolio Website"
 								summary="Welcome to my personal portfolio website, the very platform you're currently exploring! Crafted with cutting-edge technologies such as React.js, Next.js, and Tailwind CSS, and powered by the versatility of TypeScript, this website showcases my skills, experiences, and projects. "
-								img={portfolioImage} link="https://portfolio-three-pi-48.vercel.app/" githubLink="https://github.com/refikbakalim/portfolio" />
+								img={portfolioImage} link="https://portfolio-three-pi-48.vercel.app/" githubLink="https://github.com/refikbakalim/portfolio" priority={true}/>
 						</div>
 
 						<div className='col-span-12'>
 							<LongProject type="Discord Bot" title="lynarx.ts"
 								summary="Lynarx is a comprehensive example of a Discord music bot, fully equipped with features such as database integration, a web dashboard, and more. Developed using discord.js and discord-player, this bot boasts an array of functionalities that make it user-friendly and customizable. It encompasses best practices and covers various concepts of discord-player, ensuring a robust performance. Written in Typescript. 
 Additionally, Lynarx is deployed on Amazon EC2 with automatic deployment capabilities, ensuring seamless updates and maintenance for a hassle-free user experience."
-								img={lynarxtsImage} link="https://www.lynarx.xyz/" githubLink="https://github.com/refikbakalim/lynarx.ts" />
+								img={lynarxtsImage} link="https://www.lynarx.xyz/" githubLink="https://github.com/refikbakalim/lynarx.ts" priority={true}/>
 						</div>
 
 						<div className='col-span-6'>
