@@ -39,6 +39,9 @@ const config: Config = {
 				primary: "#B63E96",
 				primaryDark: "#58E6D9",
 			},
+			boxShadow: {
+				"3xl": "0 15px 15px 1px rgba(80,230,217, 0.4)",
+			},
 		},
 		screens: {
 			xl: { max: "1279px" },
