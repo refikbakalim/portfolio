@@ -9,6 +9,7 @@ import type { RefObject } from 'react'
 import Skills from '@/components/Skills'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
+import TransitionEffect from "@/components/TransitionEffect";
 
 const AnimatedNumbers = ({ value }: { value: number }) => {
 
@@ -44,6 +45,7 @@ const about = () => {
 					content="About Refik Bakalim"
 				/>
 			</Head>
+			<TransitionEffect />
 			<main className='flex w-full flex-col item-center justify-center dark:text-light'>
 				<Layout className='pt-12'>
 					<AnimatedText text="A Journey Through Software Development!" className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
