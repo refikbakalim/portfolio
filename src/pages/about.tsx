@@ -60,14 +60,14 @@ const about = () => {
 							</p>
 							<p className='font-medium my-4'>
 								My skill set is diverse, covering languages like C++, C#, Java, Python, and more.
-								I&#39;ve worked extensively with cloud services such as AWS and Google Cloud, and my expertise extends to areas like database management systems, machine learning, and natural language processing.
+								I&#39;ve worked extensively with cloud services such as AWS and Google Cloud, and my expertise extends to areas like database management systems, machine learning, computer vision and natural language processing.
 								This breadth of knowledge has allowed me to contribute meaningfully to a range of projects, from Discord bots to VR games.
 								Collaboration is key in this field, and I take pride in my ability to work effectively within teams, fostering creativity and innovation.
 							</p>
 
 							<p className='font-medium'>
 								Beyond technical proficiency, effective communication is vital.
-								I&#39;m fluent in English and have a basic proficiency in Japanese, which has proven invaluable in navigating multicultural work environments.
+								I&#39;m native in Turkish, proficient in English and have a basic proficiency in Japanese, which has proven invaluable in navigating multicultural work environments.
 								My commitment to continuous learning and pushing the boundaries of innovation drives me forward.
 								As I continue to evolve in my career, I remain dedicated to leveraging my skills and experience to create impactful solutions that positively shape the digital landscape.
 							</p>
