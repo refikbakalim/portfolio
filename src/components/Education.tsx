@@ -21,7 +21,15 @@ const Education = () => {
 				<motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-primaryDark md:w-[2px] md:left-[30px] xs:left-[20px] dark:shadow-3xl' />
 				<ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
 					<Details
-						type="BSc In Computer Engineering"
+						type="MSc in Applied Computer Science and Artificial Intelligence"
+						time="Sep 2024 - Sep 2025"
+						company="University of Bradford"
+						companyLink="https://www.bradford.ac.uk/courses/pg/applied-computer-science-artificial-intelligence/"
+						place="Bradford, UK"
+						info='Machine Learning, Cloud AI, Big Data, Mobile Application Development'
+					/>
+					<Details
+						type="BSc in Computer Engineering"
 						time="2016-2022"
 						company="Middle East Technical University (METU)"
 						companyLink="https://ceng.metu.edu.tr/"

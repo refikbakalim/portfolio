@@ -53,10 +53,10 @@ const about = () => {
 						<div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8'>
 							<h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>About Me</h2>
 							<p className='font-medium'>
-								I&#39;m Ahmet Refik Bakalim, a passionate software developer based in Turkey.
+								I&#39;m Ahmet Refik Bakalim, a passionate software developer.
 								My journey into the world of technology began at METU Ankara, where I pursued my degree in Computer Science from 2016 to 2022.
 								Since then, I&#39;ve immersed myself in various roles, each contributing to my growth and expertise in the field. Notably, my time as a Software Engineer at Xcitium saw me deeply involved in full-stack web development, alongside managing cloud deployments.
-								I also played a pivotal role in building and maintaining payment infrastructure, leveraging the Stripe API.
+								I also played a pivotal role in building and maintaining payment infrastructure, leveraging the Stripe API. Currently doing my MSc in Applied Computer Science and Artificial Intelligence at University of Bradford.
 							</p>
 							<p className='font-medium my-4'>
 								My skill set is diverse, covering languages like C++, C#, Java, Python, and more.
