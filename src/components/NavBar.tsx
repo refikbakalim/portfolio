@@ -48,7 +48,7 @@ const Navbar = () => {
 	return (
 		<header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8">
 
-			<button className="flex-col justify-center items-center hidden lg:flex" onClick={handleClick}>
+			<button className="flex-col justify-center items-center hidden lg:flex" aria-label="toggle menu" onClick={handleClick}>
 				<span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"}`}></span>
 				<span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? "opacity-0" : "opacity-100"}`}></span>
 				<span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"}`}></span>
@@ -90,14 +90,14 @@ const Navbar = () => {
 					</nav>
 
 					<nav className="flex items-center justify-center flex-wrap mt-2">
-						<motion.a href="https://www.linkedin.com/in/refikbakalim/" target={"_blank"} whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }} className="w-12 mr-3 sm:mx-1">
+						<motion.a href="https://www.linkedin.com/in/refikbakalim/" target={"_blank"} aria-label="Linkedin" whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }} className="w-12 mr-3 sm:mx-1">
 							<LinkedinIcon />
 						</motion.a>
-						<motion.a href="https://github.com/refikbakalim" target={"_blank"} whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }} className="w-12 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1">
+						<motion.a href="https://github.com/refikbakalim" target={"_blank"} aria-label="Github" whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }} className="w-12 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1">
 							<GitHubIcon />
 						</motion.a>
 
-						<button onClick={() => setMode(mode === "light" ? "dark" : "light")} className={`ml-3 flex item-center justify-center rounded-full w-12 sm:mx-1
+						<button onClick={() => setMode(mode === "light" ? "dark" : "light")} aria-label="Dark Mode" className={`ml-3 flex item-center justify-center rounded-full w-12 sm:mx-1
 				${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}>
 							{
 								mode === "dark" ? <SunIcon className={"fill-dark"} /> : <MoonIcon className={"fill-dark"} />
